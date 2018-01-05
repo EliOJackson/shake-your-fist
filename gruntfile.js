@@ -4,6 +4,9 @@ module.exports = function(grunt){
       browserify: {
         'dist/bundle.js': ['javascripts/main.js']
       },
+      options: {
+          trasform: ['hbsfy'],
+      },
       jshint: {
         files: ['javascripts/**/*.js'],
       options: {
@@ -29,6 +32,9 @@ module.exports = function(grunt){
         sass: {
           files: ['sass/**/*.scss'],
           tasks: ['sass']
+        },
+        hbs: {
+            files: ['./templates/**/*.hbs']
         }
       }
     });
